@@ -17,7 +17,7 @@
     },
     {
       "name": "Roma Capitale - Deliberazioni",
-      "url": "https://www.comune.roma.it/web/it/deliberazioni-atti-e-regolamenti.page"
+      "url": "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF41468"
     },
     {
       "name": "AMA Roma - Normativa TARI",
@@ -81,77 +81,89 @@
   "notes": [
     "File statico V16.3 da pubblicare su GitHub Pages. Modificare solo dopo verifica delle fonti ufficiali e incrementare configVersion."
   ],
-  "checkedAt": "2026-09-27T12:58:26+00:00",
+  "checkedAt": "2026-09-27T13:05:32+00:00",
   "sourceStatus": [
     {
       "name": "Gazzetta Ufficiale",
       "url": "https://www.gazzettaufficiale.it/eli/id/2025/12/13/25A06705",
-      "checkedAt": "2026-09-27T12:58:26+00:00",
+      "checkedAt": "2026-09-27T13:05:32+00:00",
       "status": "OK",
-      "message": "Fonte raggiunta; riscontri: 10 dicembre 2025",
-      "elapsedMs": 9184,
       "httpStatus": 200,
+      "message": "Fonte raggiunta; riscontri: 10 dicembre 2025",
+      "elapsedMs": 5185,
       "responseBytes": 17205,
       "contentType": "text/html;charset=UTF-8"
     },
     {
       "name": "Normattiva Open Data",
       "url": "https://dati.normattiva.it/",
-      "checkedAt": "2026-09-27T12:58:36+00:00",
-      "status": "DA_VERIFICARE",
-      "message": "Fonte raggiunta, ma nessun riscontro configurato trovato",
-      "elapsedMs": 2079,
+      "checkedAt": "2026-09-27T13:05:38+00:00",
+      "status": "OK",
       "httpStatus": 200,
+      "message": "Fonte raggiunta; riscontri: OpenData",
+      "elapsedMs": 2167,
       "responseBytes": 57348,
       "contentType": "text/html"
     },
     {
       "name": "Roma Capitale - TARI",
       "url": "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF656833",
-      "checkedAt": "2026-09-27T12:58:38+00:00",
+      "checkedAt": "2026-09-27T13:05:40+00:00",
       "status": "OK",
-      "message": "Fonte raggiunta; riscontri: TARI",
-      "elapsedMs": 1359,
       "httpStatus": 200,
+      "message": "Fonte raggiunta; riscontri: TARI, 121/2026, 120/2026",
+      "elapsedMs": 1758,
       "responseBytes": 109434,
       "contentType": "text/html;charset=UTF-8"
     },
     {
       "name": "Roma Capitale - Deliberazioni",
-      "url": "https://www.comune.roma.it/web/it/deliberazioni-atti-e-regolamenti.page",
-      "checkedAt": "2026-09-27T12:58:39+00:00",
+      "url": "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF41468",
+      "checkedAt": "2026-09-27T13:05:42+00:00",
       "status": "OK",
-      "message": "Fonte raggiunta; riscontri: Deliberazioni, atti",
-      "elapsedMs": 989,
       "httpStatus": 200,
-      "responseBytes": 96413,
-      "contentType": "text/html;charset=utf-8"
+      "message": "Fonte raggiunta; riscontri: Regolamenti entrate, 318-2025, 98 del 4 giugno 2026, 239 del 30 luglio 2026",
+      "elapsedMs": 1405,
+      "responseBytes": 102741,
+      "contentType": "text/html;charset=UTF-8"
     },
     {
       "name": "AMA Roma - Normativa TARI",
       "url": "https://www.amaroma.it/it/tari/normativa",
-      "checkedAt": "2026-09-27T12:58:40+00:00",
-      "status": "BLOCCO_ACCESSO",
-      "message": "HTTP 403: la fonte ufficiale e online ma rifiuta la richiesta automatizzata dal runner GitHub. Nessun dato e stato considerato verificato.",
-      "elapsedMs": 1239,
-      "httpStatus": 403
+      "checkedAt": "2026-09-27T13:05:43+00:00",
+      "status": "OK_FONTE_EQUIVALENTE",
+      "httpStatus": 403,
+      "message": "AMA blocca la richiesta automatizzata con HTTP 403; contenuto normativo verificato sulla fonte ufficiale Roma Capitale. Riscontri: 121/2026, 120/2026, Regolamento Tari",
+      "elapsedMs": 2777,
+      "verificationUrl": "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF656833",
+      "verificationHttpStatus": 200,
+      "verificationType": "fonte_ufficiale_equivalente",
+      "responseBytes": 109434,
+      "contentType": "text/html;charset=UTF-8"
     },
     {
       "name": "AMA Roma - Ravvedimento operoso",
       "url": "https://www.amaroma.it/it/tari/ravvedimento-operoso",
-      "checkedAt": "2026-09-27T12:58:41+00:00",
-      "status": "BLOCCO_ACCESSO",
-      "message": "HTTP 403: la fonte ufficiale e online ma rifiuta la richiesta automatizzata dal runner GitHub. Nessun dato e stato considerato verificato.",
-      "elapsedMs": 355,
-      "httpStatus": 403
+      "checkedAt": "2026-09-27T13:05:46+00:00",
+      "status": "OK_FONTE_EQUIVALENTE",
+      "httpStatus": 403,
+      "message": "AMA blocca la richiesta automatizzata con HTTP 403; contenuto normativo verificato sulla fonte ufficiale Roma Capitale. Riscontri: 1,60%, Ravvedimento operoso Tari, Sanzioni applicabili",
+      "elapsedMs": 1306,
+      "verificationUrl": "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF1200274",
+      "verificationHttpStatus": 200,
+      "verificationType": "fonte_ufficiale_equivalente",
+      "responseBytes": 99381,
+      "contentType": "text/html;charset=UTF-8"
     }
   ],
   "monitoring": {
-    "checkedAt": "2026-09-27T12:58:26+00:00",
+    "checkedAt": "2026-09-27T13:05:32+00:00",
     "total": 6,
-    "ok": 3,
-    "warning": 3,
-    "blocked": 2,
+    "ok": 6,
+    "directOk": 4,
+    "verifiedByEquivalentOfficialSource": 2,
+    "warning": 0,
+    "blocked": 0,
     "error": 0
   }
 }
