@@ -5,15 +5,19 @@
   "sources": [
     {
       "name": "Gazzetta Ufficiale",
-      "url": "https://www.gazzettaufficiale.it/"
+      "url": "https://www.gazzettaufficiale.it/eli/id/2025/12/13/25A06705"
     },
     {
-      "name": "Normattiva",
-      "url": "https://www.normattiva.it/"
+      "name": "Normattiva Open Data",
+      "url": "https://dati.normattiva.it/"
     },
     {
       "name": "Roma Capitale - TARI",
       "url": "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF656833"
+    },
+    {
+      "name": "Roma Capitale - Deliberazioni",
+      "url": "https://www.comune.roma.it/web/it/deliberazioni-atti-e-regolamenti.page"
     },
     {
       "name": "AMA Roma - Normativa TARI",
@@ -76,5 +80,77 @@
   },
   "notes": [
     "File statico V16.3 da pubblicare su GitHub Pages. Modificare solo dopo verifica delle fonti ufficiali e incrementare configVersion."
-  ]
+  ],
+  "checkedAt": "2026-09-27T12:24:51+00:00",
+  "sourceStatus": [
+    {
+      "name": "Gazzetta Ufficiale",
+      "url": "https://www.gazzettaufficiale.it/eli/id/2025/12/13/25A06705",
+      "checkedAt": "2026-09-27T12:24:51+00:00",
+      "status": "OK",
+      "httpStatus": 200,
+      "message": "Fonte raggiunta; riscontri: 10 dicembre 2025",
+      "responseBytes": 17205,
+      "contentType": "text/html;charset=UTF-8",
+      "elapsedMs": 8381
+    },
+    {
+      "name": "Normattiva Open Data",
+      "url": "https://dati.normattiva.it/",
+      "checkedAt": "2026-09-27T12:25:00+00:00",
+      "status": "DA_VERIFICARE",
+      "httpStatus": 200,
+      "message": "Fonte raggiunta, ma nessun riscontro configurato trovato",
+      "responseBytes": 57348,
+      "contentType": "text/html",
+      "elapsedMs": 3447
+    },
+    {
+      "name": "Roma Capitale - TARI",
+      "url": "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF656833",
+      "checkedAt": "2026-09-27T12:25:03+00:00",
+      "status": "OK",
+      "httpStatus": 200,
+      "message": "Fonte raggiunta; riscontri: TARI",
+      "responseBytes": 109434,
+      "contentType": "text/html;charset=UTF-8",
+      "elapsedMs": 1651
+    },
+    {
+      "name": "Roma Capitale - Deliberazioni",
+      "url": "https://www.comune.roma.it/web/it/deliberazioni-atti-e-regolamenti.page",
+      "checkedAt": "2026-09-27T12:25:05+00:00",
+      "status": "OK",
+      "httpStatus": 200,
+      "message": "Fonte raggiunta; riscontri: Deliberazioni, atti",
+      "responseBytes": 96413,
+      "contentType": "text/html;charset=utf-8",
+      "elapsedMs": 1363
+    },
+    {
+      "name": "AMA Roma - Normativa TARI",
+      "url": "https://www.amaroma.it/it/tari/normativa",
+      "checkedAt": "2026-09-27T12:25:06+00:00",
+      "status": "ERRORE",
+      "httpStatus": 403,
+      "message": "HTTP 403",
+      "elapsedMs": 942
+    },
+    {
+      "name": "AMA Roma - Ravvedimento operoso",
+      "url": "https://www.amaroma.it/it/tari/ravvedimento-operoso",
+      "checkedAt": "2026-09-27T12:25:07+00:00",
+      "status": "ERRORE",
+      "httpStatus": 403,
+      "message": "HTTP 403",
+      "elapsedMs": 449
+    }
+  ],
+  "monitoring": {
+    "checkedAt": "2026-09-27T12:24:51+00:00",
+    "total": 6,
+    "ok": 3,
+    "warning": 1,
+    "error": 2
+  }
 }
