@@ -81,76 +81,77 @@
   "notes": [
     "File statico V16.3 da pubblicare su GitHub Pages. Modificare solo dopo verifica delle fonti ufficiali e incrementare configVersion."
   ],
-  "checkedAt": "2026-09-27T12:29:50+00:00",
+  "checkedAt": "2026-09-27T12:58:26+00:00",
   "sourceStatus": [
     {
       "name": "Gazzetta Ufficiale",
       "url": "https://www.gazzettaufficiale.it/eli/id/2025/12/13/25A06705",
-      "checkedAt": "2026-09-27T12:29:50+00:00",
+      "checkedAt": "2026-09-27T12:58:26+00:00",
       "status": "OK",
-      "httpStatus": 200,
       "message": "Fonte raggiunta; riscontri: 10 dicembre 2025",
+      "elapsedMs": 9184,
+      "httpStatus": 200,
       "responseBytes": 17205,
-      "contentType": "text/html;charset=UTF-8",
-      "elapsedMs": 8449
+      "contentType": "text/html;charset=UTF-8"
     },
     {
       "name": "Normattiva Open Data",
       "url": "https://dati.normattiva.it/",
-      "checkedAt": "2026-09-27T12:29:58+00:00",
+      "checkedAt": "2026-09-27T12:58:36+00:00",
       "status": "DA_VERIFICARE",
-      "httpStatus": 200,
       "message": "Fonte raggiunta, ma nessun riscontro configurato trovato",
+      "elapsedMs": 2079,
+      "httpStatus": 200,
       "responseBytes": 57348,
-      "contentType": "text/html",
-      "elapsedMs": 2533
+      "contentType": "text/html"
     },
     {
       "name": "Roma Capitale - TARI",
       "url": "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF656833",
-      "checkedAt": "2026-09-27T12:30:01+00:00",
+      "checkedAt": "2026-09-27T12:58:38+00:00",
       "status": "OK",
-      "httpStatus": 200,
       "message": "Fonte raggiunta; riscontri: TARI",
+      "elapsedMs": 1359,
+      "httpStatus": 200,
       "responseBytes": 109434,
-      "contentType": "text/html;charset=UTF-8",
-      "elapsedMs": 1486
+      "contentType": "text/html;charset=UTF-8"
     },
     {
       "name": "Roma Capitale - Deliberazioni",
       "url": "https://www.comune.roma.it/web/it/deliberazioni-atti-e-regolamenti.page",
-      "checkedAt": "2026-09-27T12:30:02+00:00",
+      "checkedAt": "2026-09-27T12:58:39+00:00",
       "status": "OK",
-      "httpStatus": 200,
       "message": "Fonte raggiunta; riscontri: Deliberazioni, atti",
+      "elapsedMs": 989,
+      "httpStatus": 200,
       "responseBytes": 96413,
-      "contentType": "text/html;charset=utf-8",
-      "elapsedMs": 1158
+      "contentType": "text/html;charset=utf-8"
     },
     {
       "name": "AMA Roma - Normativa TARI",
       "url": "https://www.amaroma.it/it/tari/normativa",
-      "checkedAt": "2026-09-27T12:30:03+00:00",
-      "status": "ERRORE",
-      "httpStatus": 403,
-      "message": "HTTP 403",
-      "elapsedMs": 929
+      "checkedAt": "2026-09-27T12:58:40+00:00",
+      "status": "BLOCCO_ACCESSO",
+      "message": "HTTP 403: la fonte ufficiale e online ma rifiuta la richiesta automatizzata dal runner GitHub. Nessun dato e stato considerato verificato.",
+      "elapsedMs": 1239,
+      "httpStatus": 403
     },
     {
       "name": "AMA Roma - Ravvedimento operoso",
       "url": "https://www.amaroma.it/it/tari/ravvedimento-operoso",
-      "checkedAt": "2026-09-27T12:30:04+00:00",
-      "status": "ERRORE",
-      "httpStatus": 403,
-      "message": "HTTP 403",
-      "elapsedMs": 561
+      "checkedAt": "2026-09-27T12:58:41+00:00",
+      "status": "BLOCCO_ACCESSO",
+      "message": "HTTP 403: la fonte ufficiale e online ma rifiuta la richiesta automatizzata dal runner GitHub. Nessun dato e stato considerato verificato.",
+      "elapsedMs": 355,
+      "httpStatus": 403
     }
   ],
   "monitoring": {
-    "checkedAt": "2026-09-27T12:29:50+00:00",
+    "checkedAt": "2026-09-27T12:58:26+00:00",
     "total": 6,
     "ok": 3,
-    "warning": 1,
-    "error": 2
+    "warning": 3,
+    "blocked": 2,
+    "error": 0
   }
 }
