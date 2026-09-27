@@ -1,0 +1,56 @@
+name: Aggiorna e monitora normativa TARI
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tari-normativa-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: Interroga fonti e aggiorna JSON
+        run: python aggiorna_normativa.py
+
+      - name: Valida JSON prodotto
+        run: python -m json.tool normativa_tari.json > /dev/null
+
+      - name: Mostra riepilogo nel job
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('normativa_tari.json',encoding='utf-8'))
+          m=d.get('monitoring',{})
+          print(f"Controllo: {m.get('checkedAt')} | OK={m.get('ok')} | warning={m.get('warning')} | errori={m.get('error')}")
+          for x in d.get('sourceStatus',[]): print(f"{x['name']}: {x['status']} - {x.get('httpStatus')} - {x['checkedAt']}")
+          PY
+
+      - name: Pubblica solo se il JSON e cambiato
+        run: |
+          if git diff --quiet -- normativa_tari.json; then
+            echo "Nessuna modifica da pubblicare"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add normativa_tari.json
+          git commit -m "chore: aggiorna monitoraggio fonti TARI"
+          git push
