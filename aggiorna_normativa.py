@@ -52,9 +52,34 @@ def check(src):
     except Exception as e: return make(src,started,t,'ERRORE',str(e)[:300])
 def main():
     cfg=load_cfg(); started=iso_now(); results=[check(s) for s in SOURCES]
-    cfg['checkedAt']=started; cfg['sourceStatus']=results
+    cfg['checkedAt']=started
+    cfg['sourceStatus']=results
     cfg['monitoring']={'checkedAt':started,'total':len(results),'ok':sum(x['status'] in ('OK','OK_FONTE_EQUIVALENTE') for x in results),'directOk':sum(x['status']=='OK' for x in results),'verifiedByEquivalentOfficialSource':sum(x['status']=='OK_FONTE_EQUIVALENTE' for x in results),'warning':sum(x['status'] in ('DA_VERIFICARE','BLOCCO_ACCESSO') for x in results),'blocked':sum(x['status']=='BLOCCO_ACCESSO' for x in results),'error':sum(x['status']=='ERRORE' for x in results)}
-    cfg['sources']=[{'name':s['name'],'url':s['url']} for s in SOURCES]
+    # Alias esplicito per i client/calcolatori che leggono le attestazioni aggregate.
+    cfg['sourceVerification']=dict(cfg['monitoring'])
+    # Scrive l'esito anche nelle singole fonti e in sourceChecks.
+    # In questo modo il JSON pubblicato contiene realmente le attestazioni 6/6.
+    cfg['sources']=[]
+    cfg['sourceChecks']=[]
+    for r in results:
+        verified=r['status'] in ('OK','OK_FONTE_EQUIVALENTE')
+        item=dict(r)
+        item['ok']=verified
+        item['verified']=verified
+        item['confirmed']=verified
+        cfg['sourceChecks'].append(item)
+        cfg['sources'].append({
+            'name':r['name'],
+            'url':r['url'],
+            'status':r['status'],
+            'ok':verified,
+            'verified':verified,
+            'confirmed':verified,
+            'checkedAt':r['checkedAt'],
+            'message':r['message'],
+            **({'verificationUrl':r['verificationUrl']} if r.get('verificationUrl') else {}),
+            **({'verificationType':r['verificationType']} if r.get('verificationType') else {})
+        })
     OUT.write_text(json.dumps(cfg,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(cfg['monitoring'],ensure_ascii=False))
     for x in results: print(f"{x['name']}: {x['status']} - HTTP {x.get('httpStatus')} - {x['checkedAt']} - {x['message']}")
