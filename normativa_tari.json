@@ -85,101 +85,89 @@
   "notes": [
     "File statico V16.3 da pubblicare su GitHub Pages. Modificare solo dopo verifica delle fonti ufficiali e incrementare configVersion."
   ],
-  "checkedAt": "2026-10-15T12:52:18+00:00",
+  "checkedAt": "2026-10-15T18:47:47+00:00",
   "sourceStatus": [
     {
       "name": "Gazzetta Ufficiale",
       "url": "https://www.gazzettaufficiale.it/eli/id/2025/12/13/25A06705",
-      "checkedAt": "2026-10-15T12:52:18+00:00",
+      "checkedAt": "2026-10-15T18:47:47+00:00",
       "status": "OK",
       "httpStatus": 200,
       "message": "Fonte raggiunta; riscontri: 10 dicembre 2025",
-      "elapsedMs": 4826,
+      "elapsedMs": 5519,
       "responseBytes": 17205,
       "contentType": "text/html;charset=UTF-8"
     },
     {
       "name": "Normattiva Open Data",
       "url": "https://dati.normattiva.it/",
-      "checkedAt": "2026-10-15T12:52:23+00:00",
+      "checkedAt": "2026-10-15T18:47:53+00:00",
       "status": "OK",
       "httpStatus": 200,
       "message": "Fonte raggiunta; riscontri: OpenData",
-      "elapsedMs": 3054,
-      "responseBytes": 57788,
+      "elapsedMs": 1767,
+      "responseBytes": 57789,
       "contentType": "text/html"
     },
     {
       "name": "Roma Capitale - TARI",
       "url": "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF656833",
-      "checkedAt": "2026-10-15T12:52:26+00:00",
-      "status": "OK",
-      "httpStatus": 200,
-      "message": "Fonte raggiunta; riscontri: TARI, 121/2026, 120/2026",
-      "elapsedMs": 1170,
-      "responseBytes": 110178,
-      "contentType": "text/html;charset=UTF-8"
+      "checkedAt": "2026-10-15T18:47:54+00:00",
+      "status": "ERRORE",
+      "httpStatus": null,
+      "message": "<urlopen error timed out>",
+      "elapsedMs": 25252
     },
     {
       "name": "Roma Capitale - Deliberazioni",
       "url": "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF41468",
-      "checkedAt": "2026-10-15T12:52:28+00:00",
-      "status": "OK",
-      "httpStatus": 200,
-      "message": "Fonte raggiunta; riscontri: Regolamenti entrate, 318-2025, 98 del 4 giugno 2026, 239 del 30 luglio 2026",
-      "elapsedMs": 1044,
-      "responseBytes": 103485,
-      "contentType": "text/html;charset=UTF-8"
+      "checkedAt": "2026-10-15T18:48:20+00:00",
+      "status": "ERRORE",
+      "httpStatus": null,
+      "message": "<urlopen error timed out>",
+      "elapsedMs": 25220
     },
     {
       "name": "AMA Roma - Normativa TARI",
       "url": "https://www.amaroma.it/it/tari/normativa",
-      "checkedAt": "2026-10-15T12:52:29+00:00",
-      "status": "OK_FONTE_EQUIVALENTE",
+      "checkedAt": "2026-10-15T18:48:45+00:00",
+      "status": "BLOCCO_ACCESSO",
       "httpStatus": 403,
-      "message": "AMA blocca la richiesta automatizzata con HTTP 403; contenuto normativo verificato sulla fonte ufficiale Roma Capitale. Riscontri: 121/2026, 120/2026, Regolamento Tari",
-      "elapsedMs": 1486,
-      "verificationUrl": "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF656833",
-      "verificationHttpStatus": 200,
-      "verificationType": "fonte_ufficiale_equivalente",
-      "responseBytes": 110178,
-      "contentType": "text/html;charset=UTF-8"
+      "message": "AMA blocca la richiesta automatizzata con HTTP 403; verifica equivalente non conclusiva: <urlopen error timed out>",
+      "elapsedMs": 25835,
+      "verificationUrl": "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF656833"
     },
     {
       "name": "AMA Roma - Ravvedimento operoso",
       "url": "https://www.amaroma.it/it/tari/ravvedimento-operoso",
-      "checkedAt": "2026-10-15T12:52:30+00:00",
-      "status": "OK_FONTE_EQUIVALENTE",
+      "checkedAt": "2026-10-15T18:49:11+00:00",
+      "status": "BLOCCO_ACCESSO",
       "httpStatus": 403,
-      "message": "AMA blocca la richiesta automatizzata con HTTP 403; contenuto normativo verificato sulla fonte ufficiale Roma Capitale. Riscontri: 1,60%, Ravvedimento operoso Tari, Sanzioni applicabili",
-      "elapsedMs": 1201,
-      "verificationUrl": "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF1200274",
-      "verificationHttpStatus": 200,
-      "verificationType": "fonte_ufficiale_equivalente",
-      "responseBytes": 100125,
-      "contentType": "text/html;charset=UTF-8"
+      "message": "AMA blocca la richiesta automatizzata con HTTP 403; verifica equivalente non conclusiva: <urlopen error timed out>",
+      "elapsedMs": 25533,
+      "verificationUrl": "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF1200274"
     },
     {
       "name": "ARERA - Perequazione rifiuti",
       "url": "https://www.arera.it/fileadmin/allegati/docs/25/allegato-a-355-25-rif-aggiornato.pdf",
-      "checkedAt": "2026-10-15T12:52:31+00:00",
+      "checkedAt": "2026-10-15T18:49:36+00:00",
       "status": "DA_VERIFICARE",
       "httpStatus": 200,
       "message": "Fonte raggiunta, ma nessun riscontro configurato trovato",
-      "elapsedMs": 695,
+      "elapsedMs": 727,
       "responseBytes": 20,
       "contentType": "text/plain; charset=utf-8"
     }
   ],
   "monitoring": {
-    "checkedAt": "2026-10-15T12:52:18+00:00",
+    "checkedAt": "2026-10-15T18:47:47+00:00",
     "total": 7,
-    "ok": 6,
-    "directOk": 4,
-    "verifiedByEquivalentOfficialSource": 2,
-    "warning": 1,
-    "blocked": 0,
-    "error": 0
+    "ok": 2,
+    "directOk": 2,
+    "verifiedByEquivalentOfficialSource": 0,
+    "warning": 3,
+    "blocked": 2,
+    "error": 2
   },
   "sourceVerification": {
     "checkedAt": "2026-10-01T19:59:47+00:00",
