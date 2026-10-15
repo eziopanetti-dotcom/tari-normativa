@@ -85,60 +85,60 @@
   "notes": [
     "File statico V16.3 da pubblicare su GitHub Pages. Modificare solo dopo verifica delle fonti ufficiali e incrementare configVersion."
   ],
-  "checkedAt": "2026-10-14T18:48:50+00:00",
+  "checkedAt": "2026-10-15T00:49:24+00:00",
   "sourceStatus": [
     {
       "name": "Gazzetta Ufficiale",
       "url": "https://www.gazzettaufficiale.it/eli/id/2025/12/13/25A06705",
-      "checkedAt": "2026-10-14T18:48:50+00:00",
+      "checkedAt": "2026-10-15T00:49:24+00:00",
       "status": "OK",
       "httpStatus": 200,
       "message": "Fonte raggiunta; riscontri: 10 dicembre 2025",
-      "elapsedMs": 4977,
+      "elapsedMs": 7629,
       "responseBytes": 17205,
       "contentType": "text/html;charset=UTF-8"
     },
     {
       "name": "Normattiva Open Data",
       "url": "https://dati.normattiva.it/",
-      "checkedAt": "2026-10-14T18:48:55+00:00",
+      "checkedAt": "2026-10-15T00:49:32+00:00",
       "status": "OK",
       "httpStatus": 200,
       "message": "Fonte raggiunta; riscontri: OpenData",
-      "elapsedMs": 2424,
+      "elapsedMs": 2995,
       "responseBytes": 57790,
       "contentType": "text/html"
     },
     {
       "name": "Roma Capitale - TARI",
       "url": "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF656833",
-      "checkedAt": "2026-10-14T18:48:58+00:00",
+      "checkedAt": "2026-10-15T00:49:35+00:00",
       "status": "OK",
       "httpStatus": 200,
       "message": "Fonte raggiunta; riscontri: TARI, 121/2026, 120/2026",
-      "elapsedMs": 1087,
+      "elapsedMs": 1438,
       "responseBytes": 110178,
       "contentType": "text/html;charset=UTF-8"
     },
     {
       "name": "Roma Capitale - Deliberazioni",
       "url": "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF41468",
-      "checkedAt": "2026-10-14T18:48:59+00:00",
+      "checkedAt": "2026-10-15T00:49:36+00:00",
       "status": "OK",
       "httpStatus": 200,
       "message": "Fonte raggiunta; riscontri: Regolamenti entrate, 318-2025, 98 del 4 giugno 2026, 239 del 30 luglio 2026",
-      "elapsedMs": 1289,
+      "elapsedMs": 1445,
       "responseBytes": 103485,
       "contentType": "text/html;charset=UTF-8"
     },
     {
       "name": "AMA Roma - Normativa TARI",
       "url": "https://www.amaroma.it/it/tari/normativa",
-      "checkedAt": "2026-10-14T18:49:00+00:00",
+      "checkedAt": "2026-10-15T00:49:38+00:00",
       "status": "OK_FONTE_EQUIVALENTE",
       "httpStatus": 403,
       "message": "AMA blocca la richiesta automatizzata con HTTP 403; contenuto normativo verificato sulla fonte ufficiale Roma Capitale. Riscontri: 121/2026, 120/2026, Regolamento Tari",
-      "elapsedMs": 1734,
+      "elapsedMs": 2006,
       "verificationUrl": "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF656833",
       "verificationHttpStatus": 200,
       "verificationType": "fonte_ufficiale_equivalente",
@@ -148,11 +148,11 @@
     {
       "name": "AMA Roma - Ravvedimento operoso",
       "url": "https://www.amaroma.it/it/tari/ravvedimento-operoso",
-      "checkedAt": "2026-10-14T18:49:02+00:00",
+      "checkedAt": "2026-10-15T00:49:40+00:00",
       "status": "OK_FONTE_EQUIVALENTE",
       "httpStatus": 403,
       "message": "AMA blocca la richiesta automatizzata con HTTP 403; contenuto normativo verificato sulla fonte ufficiale Roma Capitale. Riscontri: 1,60%, Ravvedimento operoso Tari, Sanzioni applicabili",
-      "elapsedMs": 1221,
+      "elapsedMs": 1153,
       "verificationUrl": "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF1200274",
       "verificationHttpStatus": 200,
       "verificationType": "fonte_ufficiale_equivalente",
@@ -162,22 +162,24 @@
     {
       "name": "ARERA - Perequazione rifiuti",
       "url": "https://www.arera.it/fileadmin/allegati/docs/25/allegato-a-355-25-rif-aggiornato.pdf",
-      "checkedAt": "2026-10-14T18:49:03+00:00",
-      "status": "ERRORE",
-      "httpStatus": null,
-      "message": "The read operation timed out",
-      "elapsedMs": 25115
+      "checkedAt": "2026-10-15T00:49:41+00:00",
+      "status": "DA_VERIFICARE",
+      "httpStatus": 200,
+      "message": "Fonte raggiunta, ma nessun riscontro configurato trovato",
+      "elapsedMs": 723,
+      "responseBytes": 20,
+      "contentType": "text/plain; charset=utf-8"
     }
   ],
   "monitoring": {
-    "checkedAt": "2026-10-14T18:48:50+00:00",
+    "checkedAt": "2026-10-15T00:49:24+00:00",
     "total": 7,
     "ok": 6,
     "directOk": 4,
     "verifiedByEquivalentOfficialSource": 2,
-    "warning": 0,
+    "warning": 1,
     "blocked": 0,
-    "error": 1
+    "error": 0
   },
   "sourceVerification": {
     "checkedAt": "2026-10-01T19:59:47+00:00",
